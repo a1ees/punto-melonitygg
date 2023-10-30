@@ -2,7 +2,7 @@
 // @name         melonity punto
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  Кастомный пунтосвитчер для вк
 // @author       alees
 // @match        https://vk.com/gim*
 // @icon         none
