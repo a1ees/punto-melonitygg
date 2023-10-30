@@ -80,12 +80,12 @@
         const textContent = item.text.length > 56
       ? `${item.text.slice(0, 56)}...`
       : item.text;
-        templateListItem.textContent = `Шаблон: ${item.templates}\nТекст: `
+        templateListItem.textContent = `${item.templates}\n`
 
         const textContentElement = document.createElement('span');
         textContentElement.textContent = textContent;
         textContentElement.style.whiteSpace = 'normal';
-        textContentElement.style.marginTop = "8px";
+        textContentElement.style.color = "#8ab6d9"
         templateListItem.appendChild(textContentElement);
         templateListItem.appendChild(deleteButton);
         templateList.appendChild(templateListItem);
@@ -98,6 +98,9 @@
       arrTemplate.forEach((item) => {
         if(item.templates === currentText) {
           chatText.innerHTML = item.text.replace(/\n/g, '<br>');
+          setCursorPosition(chatText);
+        } else if("п" + item.templates === currentText) {
+          chatText.innerHTML = 'Приветствую.<br>' + item.text.replace(/\n/g, '<br>');
           setCursorPosition(chatText);
         }
       })
@@ -335,7 +338,8 @@
       }
       closeButton.style.width = "150px";
       closeButton.style.height = "20px";
-      closeButton.textContent = "Закрыть"
+      closeButton.style.marginBottom = "10px";
+      closeButton.textContent = "Закрыть";
     }
 
     const toggleModal = () => { // свичит состояние меню
@@ -431,7 +435,7 @@
           localStorage.setItem("owner", data._id)
           containerStatus = !containerStatus
           authBtn.style.backgroundColor = "green"
-          authBtn.textContent = 'Успешная авторизация!'
+          authBtn.textContent = 'Доне'
           setTimeout(() => {
             toggleModal()
           }, 1200);
