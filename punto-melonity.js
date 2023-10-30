@@ -1,3 +1,14 @@
+// ==UserScript==
+// @name         melonity punto
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       alees
+// @match        https://vk.com/gim*
+// @icon         none
+// @grant        none
+// ==/UserScript==
+
 (function() {
   'use strict';
     const rightMenu = document.querySelector('._im_right_menu'); // вк меню справа
