@@ -108,7 +108,7 @@
           chatText.innerHTML = `Ваш ключ: ${currentText}<br>Приятной игры :)`
           setCursorPosition(chatText);
         } else if(regularPromHello.test(currentText)) {
-          chatText.innerHTML = `Приветствую.<br>Ваш ключ: ${currentText}<br>Приятной игры :)`
+          chatText.innerHTML = `Приветствую.<br>Ваш ключ: ${currentText.slice(1)}<br>Приятной игры :)`
           setCursorPosition(chatText);
         }
       })
