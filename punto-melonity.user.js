@@ -68,7 +68,6 @@
         deleteButton.addEventListener('click', function () {
           deleteTemplate(item._id, user);
         });
-        console.log(i)
 
         const templateListItem = document.createElement('div');
         templateListItem.style.width = "255px"
@@ -83,7 +82,7 @@
         const textContent = item.text.length > 56
       ? `${item.text.slice(0, 56)}...`
       : item.text;
-        templateListItem.textContent = `${item.templates}\n`
+        templateListItem.textContent = `${i + 1} ${item.templates}\n`
 
         const textContentElement = document.createElement('span');
         textContentElement.textContent = textContent;
