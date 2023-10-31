@@ -79,12 +79,10 @@
         templateListItem.style.whiteSpace = 'pre-wrap';
         templateListItem.style.padding = "5px"
         templateListItem.style.position = "relative";
-        const templateNumber = `${i + 1}.`
-        templateNumber.style.fontSize = "6px";
         const textContent = item.text.length > 56
       ? `${item.text.slice(0, 56)}...`
       : item.text;
-        templateListItem.textContent = `${templateNumber} ${item.templates}\n`
+        templateListItem.textContent = `${item.templates}\n`
 
         const textContentElement = document.createElement('span');
         textContentElement.textContent = textContent;
