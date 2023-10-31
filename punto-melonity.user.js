@@ -52,6 +52,7 @@
     let arrTemplate; // хранит шаблоны пользователя
     let currentText; // хранит введенный текст в инпут вк
     const regularProm = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/; // регулярка промокода
+    const regularPromHello = /^п[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/ // проверка начала строки с п для приветствия
 
     const addTemlate = (arr) => { // добавляет шаблоны в список шаблонов
       if(templateList) {
@@ -105,6 +106,10 @@
           setCursorPosition(chatText);
         } else if(regularProm.test(currentText)) {
           chatText.innerHTML = `Ваш ключ: ${currentText}<br>Приятной игры :)`
+          setCursorPosition(chatText);
+        } else if(regularPromHello.test(currentText)) {
+          chatText.innerHTML = `Приветствую.<br>Ваш ключ: ${currentText}<br>Приятной игры :)`
+          setCursorPosition(chatText);
         }
       })
     })
