@@ -103,11 +103,7 @@
         } else if("п" + item.templates === currentText) {
           chatText.innerHTML = 'Приветствую.<br>' + item.text.replace(/\n/g, '<br>');
           setCursorPosition(chatText);
-        } else if(currentText.match(regularProm)) {
-          chatText.innerHTML = `Ваш ключ: ${currentText}<br>Приятной игры :)`
-        } else if("п" + currentText.match(regularProm)) {
-          chatText.innerHTML = 'Приветствую.<br>' + `Ваш ключ: ${currentText}<br>Приятной игры :)`
-        }
+        } 
       })
     })
 
