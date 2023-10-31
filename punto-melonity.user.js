@@ -54,11 +54,11 @@
     const regularProm = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/; // регулярка промокода
     const regularPromHello = /^п[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/ // проверка начала строки с п для приветствия
 
-    const addTemlate = (arr) => { // добавляет шаблоны в список шаблонов
+    const addTemlate = (arr) => { // добавляет шаблоны в визуальный список шаблонов
       if(templateList) {
         templateList.textContent = ''
       }
-      arr.forEach((item) => {
+      arr.forEach((item, i) => {
         const deleteButton = document.createElement('div');
         deleteButton.style.position = "absolute";
         deleteButton.style.top = "5px";
@@ -68,6 +68,7 @@
         deleteButton.addEventListener('click', function () {
           deleteTemplate(item._id, user);
         });
+        console.log(i)
 
         const templateListItem = document.createElement('div');
         templateListItem.style.width = "255px"
